@@ -3,11 +3,15 @@ import React from 'react'
 function Todo({text, todo, todos, setTodos, edit, setEdit,  todoEditing, setTodoEditing}) {
     const completeHandler = (e) => {
         setTodos(todos.map(item => {
-            if(item.id === todo.id)
+            if(item.id === todo.id) {
             return {
                 ...item, completed:!item.completed
+                }
             }
-        }))
+            return item
+            }
+            )
+        )
     }
 
     const editHandler = (e)  => {
