@@ -29,7 +29,7 @@ function Todo({text, todo, todos, setTodos, edit, setEdit,  todoEditing, setTodo
 
   return (
     <div className = 'todo'>
-    {/* swap input and list item around if edit button is selected */}
+    {/* swaps input and list item around if edit button is selected */}
         {todoEditing === todo.id ? (
             <input
             type = 'text'
@@ -46,7 +46,7 @@ function Todo({text, todo, todos, setTodos, edit, setEdit,  todoEditing, setTodo
             <i className = 'fas fa-check'/>
         </button>
 
-
+        {/* swaps edit and submit edit button around */}
         {todoEditing === todo.id ? (
             <button 
             className='complete-btn'

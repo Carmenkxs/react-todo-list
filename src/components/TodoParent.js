@@ -10,8 +10,22 @@ function TodoParent() {
 
   return (
     <div>
-      <Form input = {input} setInput = {setInput} todos = {todos} setTodos = {setTodos} edit = {edit} setEdit = {setEdit}  todoEditing = {todoEditing} setTodoEditing = {setTodoEditing}/>
-      <TodoList input = {input} setInput = {setInput} todos = {todos} setTodos = {setTodos} edit = {edit} setEdit = {setEdit}  todoEditing = {todoEditing} setTodoEditing = {setTodoEditing}/>
+      <Form 
+        input = {input} 
+        setInput = {setInput} 
+        todos = {todos} setTodos = {setTodos} 
+        edit = {edit} 
+        setEdit = {setEdit}  
+        todoEditing = {todoEditing} 
+        setTodoEditing = {setTodoEditing}/>
+      <TodoList 
+        input = {input} 
+        setInput = {setInput} 
+        todos = {todos} setTodos = {setTodos} 
+        edit = {edit} 
+        setEdit = {setEdit}  
+        todoEditing = {todoEditing} 
+        setTodoEditing = {setTodoEditing}/>
     </div>
   )
 }
