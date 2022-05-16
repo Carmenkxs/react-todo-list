@@ -37,22 +37,23 @@ function Todo({text, todo, todos, setTodos, edit, setEdit,  todoEditing, setTodo
         {todoEditing === todo.id ? (
             <input
             type = 'text'
-            // value = {text}
+            defaultValue={text}
             onChange={(e) => setEdit(e.target.value)}
         />
         ):
+        <React.Fragment>
         <li 
             className = {`todo-item ${todo.completed ? 'completed':''}`}>{text}
         </li>
-        }
-        
         <button 
             className='complete-btn'
             onClick={completeHandler}
             >
             <i className = 'fas fa-check'/>
         </button>
-
+        </React.Fragment>
+        }
+        
         {/* swaps edit and submit edit button around */}
         {todoEditing === todo.id ? (
             <button 
