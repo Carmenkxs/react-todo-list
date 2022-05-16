@@ -20,6 +20,7 @@ function Todo({text, todo, todos, setTodos, edit, setEdit,  todoEditing, setTodo
         // setTodos(updatedTodos)
         setTodoEditing(null)
         setEdit('')
+        console.log(todo.text)
     }
     
 
@@ -33,10 +34,13 @@ function Todo({text, todo, todos, setTodos, edit, setEdit,  todoEditing, setTodo
         {todoEditing === todo.id ? (
             <input
             type = 'text'
+            // value = {text}
             onChange={(e) => setEdit(e.target.value)}
         />
         ):
-        <li className = {`todo-item ${todo.completed ? 'completed':''}`}>{text}</li>
+        <li 
+            className = {`todo-item ${todo.completed ? 'completed':''}`}>{text}
+        </li>
         }
         
         <button 
@@ -49,14 +53,13 @@ function Todo({text, todo, todos, setTodos, edit, setEdit,  todoEditing, setTodo
         {/* swaps edit and submit edit button around */}
         {todoEditing === todo.id ? (
             <button 
-            className='complete-btn'
+            className='edit-btn'
             value = {edit}
             onClick={editHandler}
         >Done
         </button>
         ):
         
-
         <button 
             className='edit-btn'
             value = {edit}
@@ -66,6 +69,7 @@ function Todo({text, todo, todos, setTodos, edit, setEdit,  todoEditing, setTodo
 
         }
         
+    
         <button 
             className='delete-btn'
             onClick={deleteHandler}
