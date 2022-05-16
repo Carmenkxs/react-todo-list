@@ -57,6 +57,7 @@ function Todo({text, todo, todos, setTodos, edit, setEdit,  todoEditing, setTodo
         {/* swaps edit and submit edit button around */}
         {todoEditing === todo.id ? (
             <button 
+            type = 'submit'
             className='edit-btn'
             value = {edit}
             onClick={editHandler}
