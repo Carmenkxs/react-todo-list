@@ -2,17 +2,17 @@ import React from 'react'
 
 function Todo({text, todo, todos, setTodos, edit, setEdit,  todoEditing, setTodoEditing}) {
     const completeHandler = (e) => {
-        setTodos(todos.map(item => {
-            if(item.id === todo.id) {
-            return {
-                ...item, completed:!item.completed
-                }
+        setTodos((oldState) => {
+          const newTodo = todos.map((item) => {
+            if (item.id === todo.id) {
+              item.completed = !item.completed
+              return item
             }
             return item
-            }
-            )
-        )
-    }
+          })
+          return newTodo
+        })
+      }
 
     const editHandler = (e)  => {
         const updatedTodos = [...todos].map(item => {
@@ -21,7 +21,7 @@ function Todo({text, todo, todos, setTodos, edit, setEdit,  todoEditing, setTodo
             }
             return todo
         })
-        // setTodos(updatedTodos)
+        setTodos(updatedTodos)
         setTodoEditing(null)
         setEdit('')
         console.log(todo.text)

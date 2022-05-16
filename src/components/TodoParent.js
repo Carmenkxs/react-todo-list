@@ -8,15 +8,13 @@ function TodoParent() {
   const [todoEditing, setTodoEditing] = React.useState(null);
   const [edit,setEdit] = useState('')
 
-  console.log(todos)
-
   return (
     <div>
       <Form 
         input = {input} 
         setInput = {setInput} 
         todos = {todos} 
-        setTodos = {setTodos} 
+        setTodos = {setTodos}
         edit = {edit} 
         setEdit = {setEdit}  
         todoEditing = {todoEditing} 
