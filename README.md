@@ -1,6 +1,6 @@
 # Todo List React
 
-![Todo List Screenshot](todo-list-screenshot.png){ width: 50px; }
+![Todo List Screenshot][todo-list-screenshot.png|width: 50px]
 
 Functionality
 * add item
