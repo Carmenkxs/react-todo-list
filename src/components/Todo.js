@@ -21,7 +21,6 @@ function Todo({text, todo, todos, setTodos, edit, setEdit,  todoEditing, setTodo
             }
             return todo
         })
-        setTodos(updatedTodos)
         setTodoEditing(null)
         setEdit('')
         console.log(todo.text)
