@@ -36,6 +36,7 @@ function Todo({text, todo, todos, setTodos, edit, setEdit,  todoEditing, setTodo
     {/* swaps input and list item around if edit button is selected */}
         {todoEditing === todo.id ? (
             <input
+            // how to autofocus when not initially rendered
             type = 'text'
             defaultValue={text}
             onChange={(e) => setEdit(e.target.value)}

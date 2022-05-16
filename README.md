@@ -1,5 +1,7 @@
 # Todo List React
 
+![Todo List Screenshot](todo-list-screenshot.png)
+
 Functionality
 * add item
 * delete item
